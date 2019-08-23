@@ -11,7 +11,8 @@
 
         <div class="header-container">
 
-                <h1 class="headers"><img id="logo" src="/static/img/burgerHeaderIcon.png"> Menu Catalog</h1>
+                <h1 class="headers"><img id="logo" src="/static/img/burgerHeaderIcon.png"> 
+                    <a style="text-decoration: none; color: inherit" href="{{ url_for('restaurants') }}"> Menu Catalog </a></h1>
 
         </div>
 
@@ -31,8 +32,8 @@
                 {% endwith %}
             </div>
 
-            <div>
-                <h1>Restaurants</h1><a class="button create" href ="{{url_for('newRestaurant')}}" >Create New Item </a>
+            <div style="padding-bottom: 20px">
+                <h1 style="text-shadow: 2px 2px 6px #000">Restaurants</h1><a class="button create" href ="{{url_for('newRestaurant')}}" >Create New Item </a>
             </div>
 
             {% for i in restaurants %}

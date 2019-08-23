@@ -5,38 +5,18 @@
         <meta charset="utf-8">
         <title>Menus Catalog</title>
         <meta name="description" content="">
-        <link rel="stylesheet" href="/static/css/app.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
-<body>
-<div class="header">
+<body class="menu-color-back">
         <div class="header-container">
-                <div style="height: 50px; width: 50px; position: absolute; left: 20px; bottom: 5px;">
-                        <img class = "header-img" src="/static/img/burgerHeaderIcon.png">
-                </div>
-                <div class="header-logo">
-                        <a href="/">MenusCatalog</a>
-                </div>
+                <h1 class="headers"><img id="logo" src="../static/img/burgerHeaderIcon.png"> Menu Catalog</h1>
         </div>
-        <div class="header-nav">
-                 <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="{{url_for('restaurants')}}">Restaurants</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">About</a></li>
-                </ul>
+        <div id = "menu-main-content" class = "menu-container menu-color-for">
+                <u>hello</u>hello
         </div>
-</div>
-
-<div style="font-size: 23px; position: absolute; top: 110px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet mi quis urna vehicula vehicula. Phasellus fermentum, lorem a feugiat cursus, neque arcu accumsan odio, vitae dapibus est erat vel tellus. Nullam pretium dolor massa, vel faucibus augue aliquam vel. Praesent sed dolor sed orci congue mollis. Donec id mollis nisi, vel mattis purus. Pellentesque euismod massa ut felis pulvinar, in laoreet sapien imperdiet. In sed sodales ex. Donec mattis pellentesque semper. Quisque eget risus scelerisque, mattis libero faucibus, fermentum lacus. Pellentesque placerat turpis in mattis pulvinar. Aliquam lacinia, diam sit amet sollicitudin vestibulum, nibh urna dignissim orci, lacinia tincidunt nulla lorem ut elit. Vestibulum sed semper augue. Nulla at pretium massa, sed dignissim odio. Quisque aliquet mollis nisl, eget porta tortor posuere ac.
-
-        Maecenas convallis ante ac egestas efficitur. Nunc eget mauris quis ipsum sagittis porttitor vitae eu leo. Nulla ac aliquet lacus, quis dignissim ante. Proin tincidunt ipsum eget magna maximus efficitur. Integer et tortor ipsum. Nullam scelerisque imperdiet ipsum, non rutrum quam dictum eget. Duis risus purus, rhoncus eget tellus sit amet, auctor maximus lectus. Sed lacinia sollicitudin sodales.
-        
-        Aenean dapibus arcu a eros rutrum congue. Pellentesque fringilla mattis lectus, vitae lobortis elit auctor nec. Donec sagittis ornare mauris, in posuere erat ultrices eu. Suspendisse quis faucibus mi. Morbi massa libero, tincidunt sed lacus vitae, elementum elementum lectus. Morbi facilisis id enim ullamcorper blandit. Praesent at facilisis lectus. Praesent lobortis sapien eu magna congue commodo. In hac habitasse platea dictumst. Aliquam tincidunt massa at mi lacinia vehicula. Nulla pellentesque libero elementum lorem fringilla rhoncus. Curabitur sagittis, sapien quis mollis posuere, nisl diam feugiat leo, nec posuere eros magna a nibh. Duis eget leo in ipsum molestie suscipit. Phasellus blandit dui sit amet metus ullamcorper tincidunt. Morbi placerat rhoncus justo, nec tincidunt risus vestibulum non. Nulla eu justo blandit, placerat elit quis, blandit sem.
-        
-        Morbi congue nunc eget dui tristique, ac vehicula sapien ornare. Integer in convallis odio. Maecenas scelerisque, nisi vel varius molestie, lectus mauris pulvinar lorem, vel aliquet est risus efficitur massa. Donec vitae diam sit amet enim facilisis accumsan. Quisque sit amet cursus dolor. Nulla lacinia non velit non volutpat. Maecenas vestibulum justo at augue dictum, semper commodo mauris feugiat. Maecenas lectus arcu, finibus in pretium ac, imperdiet et est. Fusce nulla nibh, interdum tristique magna sed, tempus cursus dui.
-        
-        Praesent placerat ac velit eget rhoncus. Mauris pretium velit orci, quis hendrerit augue ultrices ut. In a augue pretium odio fermentum venenatis vitae id ante. Aenean pharetra leo vel tellus ornare, at lobortis mauris bibendum. Ut interdum sagittis auctor. Quisque id molestie dui. Praesent at tempor lacus. Nam commodo felis at iaculis consectetur. Nam aliquam eros velit, sed finibus dolor vehicula vel. Duis ultrices, purus et varius vestibulum, neque elit elementum risus, at posuere lorem dui et diam.
-</div>
 </body>
 </html>
+
+
+
+

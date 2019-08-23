@@ -1,7 +1,77 @@
-<html>
+ <!DOCTYPE html>
 
-<body>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <title>RestaurantMenu</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="/static/css/app.css">
+</head>
+<body class="menu-color-back">
+        <div class="header-container">
 
+                <h1 class="headers"><img id="logo" src="/static/img/burgerHeaderIcon.png"> 
+                    <a style="text-decoration: none; color: inherit" href="{{ url_for('restaurants') }}"> Menu Catalog </a></h1>
+
+        </div>
+        <div id = "menu-main-content" class = "menu-container menu-color-for">
+
+                <div class="flash-message">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+    
+                            <ul style="padding:5px">
+                                {% for message in messages %}
+                                    <strong>{{ message }}</strong>
+                                {% endfor %}
+                             </ul>
+    
+                        {% endif %}
+                    {% endwith %}
+                </div>
+    
+                <div style="padding-bottom: 20px">
+                    <h1 style="text-shadow: 2px 2px 6px #000">{{restaurant.name}}</h1>
+                    <a class="button create" href ="{{url_for('newMenuItem', restaurant_id=restaurant.id)}}" >Create New Item</a>
+                </div>
+    
+                {% for i in items %}
+    
+                <div style="font-family: 'Courier New', Courier, monospace; color: #f77e38; font-size: 20px">
+                        <p class="menuItem">{{i.name}}
+                            <a class="button edit" href ="{{url_for('delMenuItem', restaurant_id=restaurant.id, menu_id=i.id)}}"> Delete </a>
+                            <a class="button edit" href ="{{url_for('editMenuItem', restaurant_id=restaurant.id, menu_id=i.id)}}" >Edit </a> 
+                        </p>
+
+                        <p><i>{{i.description}}</i></p>
+                        
+                        <p> {{i.price}} </p>
+                        
+                        <p><i>{{i.course}}</i></p>
+                        <br>
+                </div>
+    
+                {% endfor %}
+            </div>
+    
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <h1>{{restaurant.name}}</h1>
 
 {% with messages = get_flashed_messages() %}
@@ -43,3 +113,4 @@
 </body>
 
 </html>
+-->
