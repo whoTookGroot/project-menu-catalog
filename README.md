@@ -5,8 +5,9 @@ to create a web application implementing the fundamentals of full stack web dev.
 lacks much of the house keeping and authorizing that I will employ in coming projects, as well as 
 session handling.
 
-DISCLAIMER: I realized there is hardly any value checking in this app, but I need to move on
-to a new project of larger scope.
+DISCLAIMER:
+- I realized there is hardly any value checking in this app, but I need to move onto a new project of larger scope.
+- Forms were not styled. I'm a novice in web dev and wanted to style the forms alittle nicer and embed them in their parent templates. However I decided I should learn to properly build the front end of projects at a later date. (my cascading is messy and redundant)   
 
 # Table of Contents
 
