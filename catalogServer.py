@@ -6,7 +6,8 @@ from flask import (
     request,
     url_for,
     redirect,
-    flash
+    flash,
+    jsonify
 )
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -94,7 +95,8 @@ def editMenuItem(restaurant_id, menu_id):
 
         session.add(menuItem)
         session.commit()
-        flash("Menu item '{name}' has been updated!".format(name=menuItem.name))
+        flash(
+            "Menu item '{name}' has been updated!".format(name=menuItem.name))
         return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
     return render_template(
@@ -161,6 +163,16 @@ def editRestaurantName(name):
         return redirect(url_for('restaurants'))
 
     return render_template('editRestaurantName.html', name=name)
+
+
+# Code copied from Udacity instructor
+@app.route("/restaurants.html/<int:restaurant_id>/JSON", methods=['GET'])
+def restaurantMenuJSON(restaurant_id):
+    restaurant = session.query(Restaurant).filter_by(id=restaurant_id).one()
+    items = session.query(MenuItem).filter_by(
+        restaurant_id=restaurant_id).all()
+    return jsonify(
+        Restaurant=restaurant.name, MenuItems=[i.serialize for i in items])
 
 
 if __name__ == '__main__':
