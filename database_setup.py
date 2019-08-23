@@ -7,9 +7,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
+# declare mapper
 Base = declarative_base()
 
 
+# restaurant table
 class Restaurant(Base):
     __tablename__ = 'restaurant'
 
@@ -28,6 +30,7 @@ class MenuItem(Base):
     restaurant_id = Column(Integer, ForeignKey('restaurant.id'))
     restaurant = relationship(Restaurant)
 
+    # JSON export
     @property
     def serialize(self):
 
@@ -40,5 +43,6 @@ class MenuItem(Base):
         }
 
 
+# connect to psql db, avoid duplicate error with checkfirst
 engine = create_engine('postgresql:///catalog')
 Base.metadata.create_all(engine, checkfirst=True)
