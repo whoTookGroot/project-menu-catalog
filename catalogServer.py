@@ -28,8 +28,10 @@ app = Flask(__name__)
 
 # landing page
 @app.route("/")
-def main():
-    return render_template('index.html')
+@app.route("/restaurants.html/")
+def restaurants():
+    restaurants = session.query(Restaurant).all()
+    return render_template('restaurants.html', restaurants=restaurants)
 
 
 # create new menu item, cannot change item ID (primary key)
@@ -48,7 +50,7 @@ def newMenuItem(restaurant_id):
 
         session.add(newItem)
         session.commit()
-        flash("Menu item '{name}' has been deleted".format(name=newItem.name))
+        flash("Menu item '{name}' has been deleted!".format(name=newItem.name))
         return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
     return render_template('newMenuItem.html', restaurant_id=restaurant_id)
@@ -60,7 +62,7 @@ def delMenuItem(restaurant_id, menu_id):
     name = session.query(MenuItem).filter_by(id=menu_id).one().name
     session.query(MenuItem).filter_by(id=menu_id).delete()
     session.commit()
-    flash("Menu item '{name}' has been deleted".format(name=name))
+    flash("Menu item '{name}' has been deleted!".format(name=name))
     return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
 
@@ -92,7 +94,7 @@ def editMenuItem(restaurant_id, menu_id):
 
         session.add(menuItem)
         session.commit()
-        flash("Menu item '{name}' has been updated".format(name=menuItem.name))
+        flash("Menu item '{name}' has been updated!".format(name=menuItem.name))
         return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
     return render_template(
@@ -114,12 +116,6 @@ def restaurantMenu(restaurant_id):
     )
 
 
-@app.route("/restaurants.html/")
-def restaurants():
-    restaurants = session.query(Restaurant).all()
-    return render_template('restaurants.html', restaurants=restaurants)
-
-
 @app.route(
     "/restaurants.html/new",
     methods=['GET', 'POST']
@@ -130,7 +126,7 @@ def newRestaurant():
         session.add(newRestaurant)
         session.commit()
         flash(
-            "Restaurant '{name}' has been created".format(
+            "Restaurant '{name}' has been created!".format(
                 name=request.form['name']
             )
         )
@@ -143,7 +139,7 @@ def newRestaurant():
 def delRestaurant(name):
     session.query(Restaurant).filter_by(name=name).delete()
     session.commit()
-    flash("Restaurant '{name}' has been deleted".format(name=name))
+    flash("Restaurant '{name}' has been deleted!".format(name=name))
     return redirect(url_for('restaurants'))
 
 
