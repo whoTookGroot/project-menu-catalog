@@ -12,7 +12,7 @@ to a new project of larger scope.
 
 - [Intro](../master/README.md#intro)
 - [Run Instructions](../master/README.md#run_instructions)
-- [ScreenShots](../master/README.md#screenshots)
+- [Screenshots](../master/README.md#screenshots)
 
 
 # Run Instructions
@@ -31,3 +31,7 @@ to a new project of larger scope.
     only exporting.
 - Simply run [catalogServer.py](../master/catalogServer.py) with ```python3 catalogServer.py```
 - Open browser and connect to ```localhost:12345```
+
+# Screenshots
+
+<img width="664" alt="Screen Shot 2019-08-23 at 3 54 34 PM" src="https://user-images.githubusercontent.com/22012906/63627862-70e49f00-c5be-11e9-9a49-108b207128f8.png">
