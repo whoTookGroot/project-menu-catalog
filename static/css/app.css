@@ -114,4 +114,11 @@ a.button:hover {
 .restaurant:hover {
   color: #e65b0b;
 }
+
+.menuItem {
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  color: #ebc312;
+}
 /*# sourceMappingURL=app.css.map */
