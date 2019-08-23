@@ -50,7 +50,7 @@ def newMenuItem(restaurant_id):
 
         session.add(newItem)
         session.commit()
-        flash("Menu item '{name}' has been deleted!".format(name=newItem.name))
+        flash("Menu item '{name}' has been created!".format(name=newItem.name))
         return redirect(url_for('restaurantMenu', restaurant_id=restaurant_id))
 
     return render_template('newMenuItem.html', restaurant_id=restaurant_id)
