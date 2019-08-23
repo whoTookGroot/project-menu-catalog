@@ -34,9 +34,9 @@ DISCLAIMER:
 - Open browser and connect to ```localhost:12345```
 
 # Screenshots
-==============================================================================================================================
+
 <img width="664" alt="Screen Shot 2019-08-23 at 3 54 34 PM" src="https://user-images.githubusercontent.com/22012906/63627862-70e49f00-c5be-11e9-9a49-108b207128f8.png">
-==============================================================================================================================
+
 <img width="1094" alt="Screen Shot 2019-08-23 at 3 53 50 PM" src="https://user-images.githubusercontent.com/22012906/63627863-70e49f00-c5be-11e9-838a-5526b3fd914e.png">
 ==============================================================================================================================
 <img width="875" alt="Screen Shot 2019-08-23 at 3 53 32 PM" src="https://user-images.githubusercontent.com/22012906/63627864-717d3580-c5be-11e9-849e-74eac3f3756c.png">
