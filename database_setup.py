@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# This file was provided by Udacity
 import sys
 import time
 from sqlalchemy import Column, ForeignKey, Integer, String
