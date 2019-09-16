@@ -1,6 +1,6 @@
 # Intro
 
-This is my project summarizing my experience with the past lession. At this point i'm able
+This is my project summarizing my experience with the past lesson. At this point i'm able
 to create a web application implementing the fundamentals of full stack web dev. This repo/project
 lacks much of the house keeping and authorizing that I will employ in coming projects, as well as 
 session handling.
